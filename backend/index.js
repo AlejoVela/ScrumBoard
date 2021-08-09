@@ -2,6 +2,8 @@
 const express = require("express");
 const cors = require("cors");
 const { dbConnection } = require("./db/db"); //sin el js para ese db final
+//traemos la ruta para role
+const Role = require("./routes/role");
 //con esto le decimos que requiere configurar esta libreria al usar variables de entorno
 require("dotenv").config();
 
@@ -12,6 +14,8 @@ const app = express();
 app.use(express.json());
 //le decimos que todas las reglas de conexión las establecerá cors
 app.use(cors());
+app.use("/api/role", Role);
+
 
 //indicamos el puerto de conexión y como segundo parametro un mensaje que devuelve al realizar la conexion
 app.listen(

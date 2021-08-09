@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const boardSchema = new mongoose.Schema8({
+const boardSchema = new mongoose.Schema({
     userId: { type: mongoose.Schema.ObjectId, ref: "user"},
     nombre: String,
     description: String,

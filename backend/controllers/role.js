@@ -1,4 +1,4 @@
-//Algunos programadores, suele en pesar el nombre del módulo con mayuscula para indicar que es un modulo propio que creamos nosotros y no de los modulos de node
+//Algunos programadores, suele empezar el nombre del módulo con mayuscula para indicar que es un modulo propio que creamos nosotros y no de los modulos de node
 const Role = require("../models/role");
 //import role from "../models/role"; con ES6
 

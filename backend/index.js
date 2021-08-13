@@ -7,6 +7,7 @@ require("dotenv").config();
 //Configuramos las rutas
 const Role = require("./routes/role");
 const User = require("./routes/user");
+const Auth = require("./routes/auth");
 
 
 //por recomendación siempre sellamara app
@@ -16,6 +17,7 @@ const app = express();
 app.use(express.json());
 //le decimos que todas las reglas de conexión las establecerá cors
 app.use(cors());
+app.use("/api/auth", Auth);
 app.use("/api/role", Role);
 app.use("/api/user", User);
 

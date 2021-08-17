@@ -20,7 +20,7 @@ const registerRole = async (req, res) => {
     const result = await role.save();
     if(!result) return res.status(401).send("Failed to register role");
 
-    return res.status(201).send( { role } );
+    return res.status(201).send( { result } );
 };
 
 const listRole = async (req, res) => {

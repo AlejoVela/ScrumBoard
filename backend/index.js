@@ -7,6 +7,7 @@ require("dotenv").config();
 //Configuramos las rutas
 const Role = require("./routes/role");
 const User = require("./routes/user");
+const Board = require("./routes/board");
 const Auth = require("./routes/auth");
 
 
@@ -20,7 +21,7 @@ app.use(cors());
 app.use("/api/auth", Auth);
 app.use("/api/role", Role);
 app.use("/api/user", User);
-
+app.use("/api/board", Board);
 
 //indicamos el puerto de conexión y como segundo parametro un mensaje que devuelve al realizar la conexion
 app.listen(

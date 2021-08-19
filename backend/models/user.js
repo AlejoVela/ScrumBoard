@@ -21,6 +21,7 @@ userSchema.methods.generateJWT = function () {
         //aqui solo enviamos el id y nombre, datos como correo y contraseña son mas sensibles de manejar
         _id: this._id,
         name: this.name,
+        roleId: this.roleId,
         iat: moment().unix(), //ussued at - emitido en (tal fecha)
     },
     //como segundo parametro pasamos nuestra palabra secreta declarada en el .env

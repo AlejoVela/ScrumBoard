@@ -26,4 +26,5 @@ const auth = async (req, res, next) => {
     }
 };
 
-module.exports = { auth };
+//los middlewares no deben llevar llaves {}  ya que son exclusivos para una sola cosa
+module.exports = auth;

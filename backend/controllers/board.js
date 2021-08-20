@@ -1,5 +1,8 @@
 const Board = require("../models/board");
 const mongoose = require("mongoose");
+const fs = require("fs"); //para manejar archivos y ficheros en la aplicacion
+const path = require("path");//manejo de rutas internas 
+const momento = require("moment"); //usaremos moment.unix() para crear nombre unicos para las imagenes
 
 const saveTask = async (req, res) => {
     if (!req.body.name || !req.body.description)
@@ -16,6 +19,10 @@ const saveTask = async (req, res) => {
     if (!result)
         return res.status(400).send("Process Failed: Failed to register task");
     return res.status(201).send({ result });
+};
+
+const saveTaskImg = async (req, res) => {
+
 };
 
 const listTasks = async (req, res) => {
@@ -59,4 +66,4 @@ const deleteTask = async (req, res) => {
     return res.status(200).send("Task deleted");
 };
 
-module.exports = { saveTask, listTasks, updateTask, deleteTask };
+module.exports = { saveTask, listTasks, updateTask, deleteTask, saveTaskImg };

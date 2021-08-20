@@ -15,6 +15,7 @@ router.post("/registerRole", Auth, ValidateUser, Admin, RoleController.registerR
 //para el registro usamos get
 //el servidor se vería como http://localhost:3001/api/role/listRole
 router.get("/listRole", Auth, ValidateUser, Admin, RoleController.listRole);
+router.put("/updateRole", Auth, ValidateUser, Admin, RoleController.updateRole);
 
 //exportamos router ya que esta haciendo todo el trabajo aqui
 module.exports = router;
